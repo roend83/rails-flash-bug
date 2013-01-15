@@ -1,0 +1,8 @@
+= content_for :body do
+  - if flash[:notice]
+    %fieldset
+      %legend Flash - Notice
+      = flash[:notice]
+  = yield
+
+= render file: 'layouts/basic'
